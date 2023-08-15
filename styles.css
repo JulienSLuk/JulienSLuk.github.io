@@ -1,3 +1,60 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+section {
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.project {
+  margin-bottom: 2rem;
+}
+
+.project img {
+  max-width: 100%;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+
 /* Reset and basic styling remain the same */
 
 /* Additional styling for animations */
@@ -67,9 +124,9 @@ body {
   font-family: Arial, sans-serif;
   background-color: #101010;
   color: #fff;
-  margin: 0; /* Reset default margin */
-  padding: 0; /* Reset default padding */
-  overflow-x: hidden; /* Hide horizontal scrollbar */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 /* Set particles container as the background */
@@ -79,7 +136,11 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Place particles behind other content */
+  z-index: -1;
+}
+
+main {
+  padding-top: 80px;
 }
 
 .home-section, .tech-section {

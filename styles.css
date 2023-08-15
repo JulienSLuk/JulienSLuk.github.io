@@ -67,6 +67,19 @@ body {
   font-family: Arial, sans-serif;
   background-color: #101010;
   color: #fff;
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+/* Set particles container as the background */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place particles behind other content */
 }
 
 .home-section, .tech-section {

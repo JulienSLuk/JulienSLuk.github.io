@@ -1,55 +1,41 @@
-/* Reset some default styles */
-body, h1, h2, p, ul, li {
-  margin: 0;
-  padding: 0;
-}
+/* Reset and basic styling remain the same */
 
-/* Basic styling */
-body {
-  font-family: Arial, sans-serif;
-}
-
-header {
-  background-color: #333;
-  color: white;
-  padding: 1rem;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
-
-nav li {
-  margin: 0 1rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-}
-
-section {
-  padding: 2rem;
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
+/* Additional styling for animations */
 .project {
-  margin-bottom: 2rem;
+  transition: transform 0.3s ease-in-out;
 }
 
-.project img {
-  max-width: 100%;
+.project:hover {
+  transform: scale(1.05);
 }
 
+/* Add your own custom styles to make it unique */
+
+/* Example of background gradient */
+body {
+  background: linear-gradient(to bottom, #1a2a6c, #b21f1f, #fdbb2d);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Example of unique header style */
+header {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  /* Other header styles */
+}
+
+/* Example of unique section styles */
+section {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* Other section styles */
+}
+
+/* Example of unique footer style */
 footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #333;
-  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  /* Other footer styles */
 }

@@ -1,41 +1,109 @@
 /* Reset and basic styling remain the same */
 
 /* Additional styling for animations */
-.project {
-  transition: transform 0.3s ease-in-out;
+.project-carousel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
 }
 
-.project:hover {
-  transform: scale(1.05);
+.project-carousel img {
+  flex: 0 0 auto;
+  width: 100%;
+  scroll-snap-align: start;
 }
 
-/* Add your own custom styles to make it unique */
+/* Cursor animation */
+.cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: #00ff00;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: cursorAnimation 0.6s infinite alternate;
+}
 
-/* Example of background gradient */
+@keyframes cursorAnimation {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: 0.5;
+  }
+}
+
+/* Typography animation */
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid #00ff00;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from, to {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #00ff00;
+  }
+}
+
+/* Minimalist design and color scheme */
 body {
-  background: linear-gradient(to bottom, #1a2a6c, #b21f1f, #fdbb2d);
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-/* Example of unique header style */
-header {
-  background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(5px);
-  /* Other header styles */
-}
-
-/* Example of unique section styles */
-section {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  /* Other section styles */
-}
-
-/* Example of unique footer style */
-footer {
-  background-color: rgba(0, 0, 0, 0.8);
+  font-family: Arial, sans-serif;
+  background-color: #101010;
   color: #fff;
-  /* Other footer styles */
+}
+
+.home-section, .tech-section {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.home-section {
+  background: linear-gradient(to bottom, #181818, #101010);
+}
+
+.tech-section {
+  background: #1a1a1a;
+}
+
+header {
+  background-color: #000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #00ff00;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #000;
+  color: #00ff00;
 }

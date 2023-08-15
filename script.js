@@ -125,3 +125,20 @@ const sectionObserver = new IntersectionObserver((entries, observer) => {
 sections.forEach(section => {
   sectionObserver.observe(section);
 });
+
+
+// Fetch user's IP address and display greeting
+async function fetchUserIP() {
+  try {
+    const response = await fetch('https://api.ipify.org?format=json');
+    const data = await response.json();
+    const userIP = data.ip;
+    const userIPElement = document.getElementById('userIP');
+    userIPElement.textContent = userIP;
+  } catch (error) {
+    console.error('Error fetching user IP:', error);
+  }
+}
+
+// Call the function to fetch user's IP
+fetchUserIP();

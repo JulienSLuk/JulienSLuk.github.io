@@ -1,18 +1,59 @@
 const greetings = ["developer", "learner", "student"];
 let greetingIndex = 0;
+let currentWord = "";
+let currentIndex = 0;
+let typing = true;
+const typingSpeed = 100; // Adjust typing speed as needed
+const backspaceSpeed = 50; // Adjust backspace speed as needed
+const pauseDuration = 1500; // Adjust pause duration in milliseconds
 const greetingText = document.getElementById("greeting-text");
 
-function cycleGreetings() {
-    greetingText.innerHTML = `Hi ${getIPAddress()} I am a ${greetings[greetingIndex]}`;
-    greetingIndex = (greetingIndex + 1) % greetings.length;
+async function getIPAddress() {
+    try {
+        const response = await fetch('https://api.ipify.org?format=json');
+        const data = await response.json();
+        return data.ip;
+    } catch (error) {
+        throw error;
+    }
 }
 
-function getIPAddress() {
-    // This is a simplified way to get IP address for demonstration purposes.
-    return "123.45.67.89";
+async function cycleGreetings() {
+    const ipAddress = await getIPAddress();
+
+    if (typing) {
+        currentWord = greetings[greetingIndex].substring(0, currentIndex);
+        greetingText.innerHTML = `Hi ${ipAddress} I am a ${currentWord}`;
+        currentIndex++;
+
+        if (currentIndex > greetings[greetingIndex].length) {
+            typing = false;
+            setTimeout(() => {
+                currentIndex--;
+                backspaceText();
+            }, pauseDuration);
+        } else {
+            setTimeout(cycleGreetings, typingSpeed);
+        }
+    }
 }
 
-setInterval(cycleGreetings, 2000); // Change greetings every 2 seconds
+function backspaceText() {
+    currentWord = greetings[greetingIndex].substring(0, currentIndex);
+    greetingText.innerHTML = `Hi ${getIPAddress()} I am a ${currentWord}`;
+    currentIndex--;
+
+    if (currentIndex < 0) {
+        typing = true;
+        greetingIndex = (greetingIndex + 1) % greetings.length;
+        setTimeout(cycleGreetings, pauseDuration);
+    } else {
+        setTimeout(backspaceText, backspaceSpeed);
+    }
+}
+
+cycleGreetings(); // Start the animation
+
 
 // Initialize particles.js
 particlesJS('particles-js', {

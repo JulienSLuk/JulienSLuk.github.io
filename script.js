@@ -111,21 +111,6 @@ particlesJS('particles-js', {
 
 
 
-// Fetch user's IP address and display greeting
-async function fetchUserIP() {
-  try {
-    const response = await fetch('https://api.ipify.org?format=json');
-    const data = await response.json();
-    const userIP = data.ip;
-    const userIPElement = document.getElementById('userIP');
-    userIPElement.textContent = userIP;
-  } catch (error) {
-    console.error('Error fetching user IP:', error);
-  }
-}
-
-// Call the function to fetch user's IP
-fetchUserIP();
 
 // Add animations and interactions using JavaScript
 // Example: Scroll-triggered animations using the Intersection Observer API
@@ -144,3 +129,52 @@ sections.forEach(section => {
   sectionObserver.observe(section);
 });
 
+
+
+// Rotating word cycle with typing and backspacing animation
+const roleCycleElement = document.getElementById('roleCycle');
+const roles = ['Developer', 'Student', 'Learner'];
+let roleIndex = 0;
+let isTyping = true;
+let currentRole = '';
+let roleCharIndex = 0;
+
+function cycleRoles() {
+  if (isTyping) {
+    currentRole = roles[roleIndex].slice(0, roleCharIndex);
+    roleCharIndex++;
+
+    if (roleCharIndex > roles[roleIndex].length) {
+      isTyping = false;
+      roleCharIndex = roles[roleIndex].length - 1;
+    }
+  } else {
+    currentRole = roles[roleIndex].slice(0, roleCharIndex);
+    roleCharIndex--;
+
+    if (roleCharIndex < 0) {
+      isTyping = true;
+      roleIndex = (roleIndex + 1) % roles.length;
+      roleCharIndex = 0;
+    }
+  }
+
+  roleCycleElement.textContent = currentRole;
+}
+
+// Fetch user's IP address and display greeting
+async function fetchUserIP() {
+  try {
+    const response = await fetch('https://api.ipify.org?format=json');
+    const data = await response.json();
+    const userIP = data.ip;
+    const userIPElement = document.getElementById('userIP');
+    userIPElement.textContent = userIP;
+  } catch (error) {
+    console.error('Error fetching user IP:', error);
+  }
+}
+
+// Call the function to fetch user's IP and start the role cycle
+fetchUserIP();
+setInterval(cycleRoles, 150); // Adjust the interval as needed

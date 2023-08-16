@@ -1,183 +1,57 @@
-/* Reset some default styles */
-body, h1, h2, p, ul, li {
+body {
   margin: 0;
-  padding: 0;
-}
-
-/* Basic styling */
-body {
   font-family: Arial, sans-serif;
 }
 
-header {
-  background-color: #333;
-  color: white;
-  padding: 1rem;
+.container {
+  display: flex;
+  height: 100vh;
 }
 
-nav ul {
-  list-style: none;
+.left {
+  flex: 1;
+  padding: 50px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
-nav li {
-  margin: 0 1rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-}
-
-section {
-  padding: 2rem;
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.project {
-  margin-bottom: 2rem;
-}
-
-.project img {
-  max-width: 100%;
-}
-
-footer {
+.greeting {
+  font-size: 24px;
   text-align: center;
-  padding: 1rem;
+  margin-bottom: 20px;
+}
+
+.cv-button {
+  display: inline-block;
+  padding: 10px 20px;
   background-color: #333;
-  color: white;
-}
-
-
-/* Reset and basic styling remain the same */
-
-/* Additional styling for animations */
-.project-carousel {
-  display: flex;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-}
-
-.project-carousel img {
-  flex: 0 0 auto;
-  width: 100%;
-  scroll-snap-align: start;
-}
-
-/* Cursor animation */
-.cursor {
-  position: fixed;
-  width: 10px;
-  height: 10px;
-  background-color: #00ff00;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  animation: cursorAnimation 0.6s infinite alternate;
-}
-
-@keyframes cursorAnimation {
-  from {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: translate(-50%, -50%) scale(1.3);
-    opacity: 0.5;
-  }
-}
-
-/* Typography animation */
-.typewriter {
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 0.15em solid #00ff00;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-}
-
-@keyframes typing {
-  from, to {
-    width: 0;
-  }
-  50% {
-    width: 100%;
-  }
-}
-
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #00ff00;
-  }
-}
-
-/* Minimalist design and color scheme */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #101010;
   color: #fff;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-/* Set particles container as the background */
-#particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-main {
-  padding-top: 80px;
-}
-
-.home-section, .tech-section {
-  padding: 5rem 0;
-  text-align: center;
-}
-
-.home-section {
-  background: linear-gradient(to bottom, #181818, #101010);
-}
-
-.tech-section {
-  background: #1a1a1a;
-}
-
-header {
-  background-color: #000;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
-
-nav li {
-  margin: 0 1rem;
-}
-
-nav a {
   text-decoration: none;
-  color: #00ff00;
+  border-radius: 5px;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #000;
-  color: #00ff00;
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+}
+
+.logo {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #333;
 }

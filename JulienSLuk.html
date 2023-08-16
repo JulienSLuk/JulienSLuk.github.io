@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link href="lightbox.min.css" rel="stylesheet">
     <title>Portfolio</title>
 </head>
 <body>
@@ -94,17 +95,18 @@
         
         <div class="right">
             <!-- Awards Image Gallery -->
-            <div class="section">
-                <h2>Awards Image Gallery</h2>
-                <div class="image-gallery">
-                    <div class="image">
-                        <img src="award1.jpg" alt="Award 1">
-                    </div>
-                    <div class="image">
-                        <img src="award2.jpg" alt="Award 2">
-                    </div>
-                    <!-- Add more image entries as needed -->
+            <div class="image-gallery">
+                <div class="image">
+                    <a href="images/workato.png" data-lightbox="image-gallery" data-title="Award 1">
+                        <img src="images/workato.png" alt="Award 1">
+                    </a>
                 </div>
+                <div class="image">
+                    <a href="path-to-your-image/award2.jpg" data-lightbox="image-gallery" data-title="Award 2">
+                        <img src="path-to-your-image/award2.jpg" alt="Award 2">
+                    </a>
+                </div>
+                <!-- Add more image entries as needed -->
             </div>
         </div>
     </div>
@@ -131,5 +133,12 @@
     
     <script src="particles.min.js"></script>
     <script src="script.js"></script>
+    <script src="lightbox.min.js"></script>
+    <script>
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+        });
+    </script>
 </body>
 </html>

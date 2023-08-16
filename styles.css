@@ -166,3 +166,48 @@ body {
 .image:hover img {
   transform: scale(1.1);
 }
+
+
+.contact-form-section {
+  padding: 50px;
+  background-color: #111; /* Dark background color for the section */
+  color: #fff;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #222; /* Darker background color for input fields */
+    color: #fff; /* Text color */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #555; /* Border color on focus */
+}
+
+.contact-form button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}

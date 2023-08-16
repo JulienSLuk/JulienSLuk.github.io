@@ -66,7 +66,7 @@ particlesJS('particles-js', {
             }
         },
         color: {
-            value: '#000' // Change to monochrome color
+            value: ['#ffffff'], // Use white color for particles
         },
         shape: {
             type: 'circle',
@@ -106,7 +106,7 @@ particlesJS('particles-js', {
         line_linked: {
             enable: true,
             distance: 150,
-            color: '#000', // Change to monochrome color
+            color: '#ffffff', // Use white color for lines
             opacity: 0.4,
             width: 1
         },

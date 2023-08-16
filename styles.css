@@ -69,3 +69,69 @@ body {
   z-index: -1; /* Place particles behind other content */
   background-color: #000; /* Set particles background color to black */
 }
+
+
+.skills-section {
+  padding: 50px;
+  background-color: #333; /* Dark background color for the skills section */
+  color: #fff;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  font-weight: bold;
+}
+
+.skill-progress {
+  width: 100%;
+  background-color: #555; /* Gray background for progress bars */
+  height: 20px;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 5px;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 10px;
+  position: absolute;
+}
+
+/* Color-coded progress bars */
+.python {
+  background-color: #4CAF50; /* Green for Python */
+  width: 90%; /* Adjust percentage as needed */
+}
+
+.csharp {
+  background-color: #2196F3; /* Blue for C# */
+  width: 75%; /* Adjust percentage as needed */
+}
+
+.html {
+  background-color: #FFC107; /* Yellow for HTML */
+  width: 80%; /* Adjust percentage as needed */
+}
+
+.css {
+  background-color: #FF5722; /* Orange for CSS */
+  width: 85%; /* Adjust percentage as needed */
+}
+
+.js {
+  background-color: #E91E63; /* Pink for JavaScript */
+  width: 70%; /* Adjust percentage as needed */
+}
+
+.batchscript {
+  background-color: #9C27B0; /* Purple for Batch Script */
+  width: 60%; /* Adjust percentage as needed */
+}
+
+.mysql {
+  background-color: #607D8B; /* Gray-blue for MySQL */
+  width: 65%; /* Adjust percentage as needed */
+}

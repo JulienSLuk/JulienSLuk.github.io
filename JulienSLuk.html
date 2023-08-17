@@ -133,11 +133,20 @@
     
     <script src="particles.min.js"></script>
     <script src="script.js"></script>
-    <script src="lightbox.min.js"></script>
+    <script src="lightbox-plus-jquery.js"></script>
     <script>
         lightbox.option({
             'resizeDuration': 200,
             'wrapAround': true,
+            'showImageNumberLabel': false, // Hide image number label
+            'disableScrolling': true, // Disable scrolling when lightbox is open
+            'alwaysShowNavOnTouchDevices': true, // Always show navigation arrows on touch devices
+            'fadeDuration': 300, // Adjust fade duration
+            'maxWidth': 800, // Maximum width for the lightbox
+            'albumLabel': "Image %1 of %2", // Customize the album label
+            'fitImagesInViewport': true, // Fit images within the viewport
+            'showCloseButton': true, // Show the close button
+            'disableNavOnTouchDevices': false // Enable navigation on touch devices
         });
     </script>
 </body>

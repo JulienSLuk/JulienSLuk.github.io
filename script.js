@@ -165,3 +165,11 @@ particlesJS('particles-js', {
     },
     retina_detect: true
 });
+
+
+const modeToggle = document.getElementById("mode-toggle");
+const body = document.body;
+
+modeToggle.addEventListener("change", () => {
+    body.classList.toggle("light-mode");
+});

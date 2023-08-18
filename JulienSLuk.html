@@ -15,6 +15,13 @@
                 <p id="greeting-text"></p>
             </div>
             <a href="your_cv.pdf" download class="cv-button">Download CV</a>
+            <div class="mode-switch">
+                <label class="switch">
+                    <input type="checkbox" id="mode-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <span>Dark Mode</span>
+            </div>
         </div>
         <div class="right">
             <div class="logo">
@@ -181,6 +188,18 @@
             'fitImagesInViewport': true, // Fit images within the viewport
             'showCloseButton': true, // Show the close button
             'disableNavOnTouchDevices': false // Enable navigation on touch devices
+        });
+    </script>
+    <script>
+        const modeToggle = document.getElementById("mode-toggle");
+        const body = document.body;
+    
+        modeToggle.addEventListener("change", () => {
+            if (modeToggle.checked) {
+                body.classList.add("dark-mode");
+            } else {
+                body.classList.remove("dark-mode");
+            }
         });
     </script>
 </body>

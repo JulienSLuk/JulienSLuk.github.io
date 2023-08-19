@@ -1,4 +1,4 @@
-const greetings = ["developer", "learner", "student"];
+const greetings = ["Full Stack Developer", "Automation Specialist", "Philanthropist"];
 let greetingIndex = 0;
 let currentWord = "";
 let currentIndex = 0;

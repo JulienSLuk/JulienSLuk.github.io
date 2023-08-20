@@ -1,9 +1,9 @@
-const greetings = ["Full Stack Developer", "Automation Specialist", "Philanthropist"];
+const greetings = ["Full-Stack Developer", "Automation Specialist", "Philanthropist"];
 let greetingIndex = 0;
 let currentWord = "";
 let currentIndex = 0;
 let typing = true;
-const typingSpeed = 100; // Adjust typing speed as needed
+const typingSpeed = 5; // Adjust typing speed as needed
 const backspaceSpeed = 50; // Adjust backspace speed as needed
 const pauseDuration = 1500; // Adjust pause duration in milliseconds
 const greetingText = document.getElementById("greeting-text");

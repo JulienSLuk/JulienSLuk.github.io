@@ -118,32 +118,3 @@ modeToggle.addEventListener("change", () => {
 });
 
 
-
-const sectionPanel = document.querySelector('.section-panel');
-const panelLinks = document.querySelectorAll('.panel-link');
-
-sectionPanel.addEventListener('mouseover', () => {
-    sectionPanel.style.right = '0';
-});
-
-sectionPanel.addEventListener('mouseout', () => {
-    sectionPanel.style.right = '-70px'; // Minimize the panel when not hovered
-});
-
-// Smooth scrolling to section when a link is clicked
-panelLinks.forEach(link => {
-    link.addEventListener('click', (event) => {
-        event.preventDefault();
-        const targetSectionId = link.getAttribute('href');
-        const targetSection = document.querySelector(targetSectionId);
-        
-        if (targetSection) {
-            targetSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-        
-        sectionPanel.style.right = '-100px'; // Close the panel after clicking a link
-    });
-});

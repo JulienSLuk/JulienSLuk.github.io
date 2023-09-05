@@ -130,13 +130,70 @@
         </div>
     </div>
 
-    <div class="section-panel">
-        <a class="panel-link" href="#container">Cover</a>
-        <a class="panel-link" href="#skills-section">Skills</a>
-        <a class="panel-link" href="#education-awards-section">Education & Awards</a>
-        <a class="panel-link" href="#projects-section">Projects</a>
-        <a class="panel-link" href="#contact-form-section">Contact</a>
-    </div>
+    <nav class="main-menu">
+        <ul>
+          <li>
+            <a href="#container">
+              <i class="fa fa-home nav-icon"></i>
+              <span class="nav-text">Home</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#skills-section">
+              <i class="fa fa-image nav-icon"></i>
+              <span class="nav-text">Skills</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#education-awards-section">
+              <i class="fa fa-image nav-icon"></i>
+              <span class="nav-text">Gallery</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#projects-section">
+              <i class="fa fa-image nav-icon"></i>
+              <span class="nav-text">Projects</span>
+            </a>
+          </li>
+  
+          <li>
+            <a href="#">
+              <i class="fa fa-pen nav-icon"></i>
+              <span class="nav-text">Blog</span>
+            </a>
+          </li>
+  
+          <li>
+            <a href="#contact-form-section">
+              <i class="fa fa-envelope nav-icon"></i>
+              <span class="nav-text">Get in Touch</span>
+            </a>
+          </li>
+  
+        </ul>
+  
+        <ul class="logout">
+          <li>
+            <a href="#">
+              <i class="fa fa-cogs nav-icon"></i>
+              <span class="nav-text">Settings</span>
+            </a>
+          </li>
+  
+          <li>
+            <a href="#">
+              <i class="fa fa-right-from-bracket nav-icon"></i>
+              <span class="nav-text">
+                Logout
+              </span>
+            </a>
+          </li>  
+        </ul>
+     </nav>
 
     <div class="projects-section" id="projects-section">
         <h2>Projects</h2>
@@ -249,6 +306,28 @@
 
         // Call the function to update the IP address
         updateIPAddress();
+    </script>
+
+    <script>
+        // Function to handle smooth scrolling when a navigation link is clicked
+        function scrollToSection(sectionId) {
+            const section = document.querySelector(sectionId);
+            if (section) {
+                window.scrollTo({
+                    top: section.offsetTop,
+                    behavior: 'smooth', // Use smooth scrolling behavior
+                });
+            }
+        }
+
+        // Add event listeners to your navigation links
+        document.querySelectorAll('.main-menu a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const sectionId = this.getAttribute('href');
+                scrollToSection(sectionId);
+            });
+        });
     </script>
 </body>
 </html>

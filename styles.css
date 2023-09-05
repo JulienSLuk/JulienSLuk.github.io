@@ -469,15 +469,50 @@ body {
 }
 
 
-.mode-button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
+/* Style the switch container */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px; /* Adjust the width as needed */
+  height: 20px; /* Adjust the height as needed */
 }
 
-.mode-button:hover {
-  background-color: #555;
+/* The slider (circle) */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px; /* Adjust the border-radius to half of the height */
+  width: 40px; /* Match the width with the container's width */
+  height: 20px; /* Match the height with the container's height */
 }
+
+/* On state */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px; /* Adjust the size of the slider's circle */
+  width: 16px; /* Adjust the size of the slider's circle */
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* When the checkbox is checked, change the background color of the slider */
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+/* When the checkbox is checked, move the slider to the right */
+input:checked + .slider:before {
+  transform: translateX(20px); /* Adjust the position to match the width of the slider */
+}
+
+

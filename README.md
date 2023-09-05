@@ -14,4 +14,5 @@ Projects Content Styling <br>
 Open cv project (item identifier/threat level) <br>
 Logo Creation <br>
 Icons - (github linkedin, software prof section-python, c# etc) <br>
-Dark/Light Mode to be styled button <br>
+Dark/Light Mode button to be styled <br>
+Light Mode to include particles bg <br>

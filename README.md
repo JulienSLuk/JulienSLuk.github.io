@@ -1,9 +1,9 @@
 # Portfolio
 
-Libraries Used
-Particles - for particles animation bg
-Lightbox - for image preview
-Typed - for typography animation
+Libraries Used <br>
+Particles - for particles animation bg <br>
+Lightbox - for image preview <br>
+Typed - for typography animation <br>
 
 # Changes to implement
 

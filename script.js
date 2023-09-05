@@ -113,8 +113,17 @@ particlesJS('particles-js', {
 const modeToggle = document.getElementById("mode-toggle");
 const body = document.body;
 
-modeToggle.addEventListener("change", () => {
+modeToggle.addEventListener("click", () => {
+    // Toggle dark mode class on the body
     body.classList.toggle("light-mode");
+    
+    // Check if dark mode is enabled and update the button text accordingly
+    if (body.classList.contains("light-mode")) {
+        modeToggle.textContent = "Dark Mode";
+    } else {
+        modeToggle.textContent = "Light Mode";
+    }
 });
+
 
 

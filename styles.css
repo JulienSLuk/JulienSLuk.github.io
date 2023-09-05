@@ -467,3 +467,17 @@ body {
   color: #fff;
   background-color: rgb(29, 79, 215, 0.7);
 }
+
+
+.mode-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mode-button:hover {
+  background-color: #555;
+}

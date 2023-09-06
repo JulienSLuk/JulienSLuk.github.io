@@ -16,3 +16,4 @@ Logo Creation <br>
 Icons - (github linkedin, software prof section-python, c# etc) <br>
 Dark/Light Mode button to be styled <br>
 Light Mode to include particles bg <br>
+Section Panel - to add icons? to minimize to hamburger menu instead of sidebar?<br>

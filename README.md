@@ -9,7 +9,7 @@ Typed - for typography animation <br>
 
 Post request for contact form <br>
 Blog section <br>
-Cert Uploads <br>
+Cert Description <br>
 Projects Content Styling <br>
 Open cv project (item identifier/threat level) <br>
 Logo Creation <br>

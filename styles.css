@@ -137,6 +137,11 @@ body {
   width: 65%; /* Adjust percentage as needed */
 }
 
+.react {
+  background-color: #666; /* Gray for react */
+  width: 50%; /* Adjust percentage as needed */
+}
+
 
 .education-awards-section {
   display: flex;

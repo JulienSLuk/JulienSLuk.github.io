@@ -303,10 +303,10 @@ a:hover {
 
 .project-card img {
   width: 100%;
-  height: 260px;
-  object-fit: contain;
-  background: #050c1f;
-  padding: 10px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.05);
 }
 
 .project-card.featured {

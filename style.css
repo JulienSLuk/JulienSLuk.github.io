@@ -583,3 +583,27 @@ a:hover {
     flex-direction: column;
   }
 }
+
+.mini-architecture {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.mini-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.mini-arrow {
+  color: var(--accent);
+  font-weight: 700;
+}

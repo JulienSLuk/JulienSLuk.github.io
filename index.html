@@ -195,6 +195,57 @@
       </div>
     </section>
 
+    <section id="architecture" class="section reveal">
+        <div class="section-heading">
+            <p class="section-label">Architecture</p>
+            <h2>PulseWatch system architecture</h2>
+        </div>
+
+        <div class="architecture-card">
+            <div class="architecture-flow">
+            <div class="flow-box">Monitored Services</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-box">FastAPI Backend</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-box">Monitoring Worker</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-box">SQLite Database</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-box">Live Dashboard</div>
+            </div>
+
+            <div class="architecture-details">
+                <div class="arch-detail-box">
+                <h3>Backend API</h3>
+                <p>
+                    Exposes REST endpoints for managing monitored services and retrieving monitoring results.
+                </p>
+                </div>
+
+                <div class="arch-detail-box">
+                <h3>Monitoring Worker</h3>
+                <p>
+                    Executes scheduled health checks and measures uptime and latency across configured services.
+                </p>
+                </div>
+
+                <div class="arch-detail-box">
+                <h3>Database Storage</h3>
+                <p>
+                    Persists service metadata, monitoring status, and response-time information for dashboard display.
+                </p>
+                </div>
+
+                <div class="arch-detail-box">
+                <h3>Dashboard Layer</h3>
+                <p>
+                    Presents monitoring results in a simple front-end view for fast operational visibility.
+                </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="skills" class="section reveal">
       <div class="section-heading">
         <p class="section-label">Skills</p>

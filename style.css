@@ -506,3 +506,74 @@ a:hover {
     gap: 10px;
   }
 }
+
+
+.architecture-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+}
+
+.architecture-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.flow-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px 18px;
+  font-weight: 700;
+  color: var(--text);
+  min-width: 150px;
+  text-align: center;
+}
+
+.flow-arrow {
+  font-size: 1.4rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.architecture-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.arch-detail-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.arch-detail-box h3 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.arch-detail-box p {
+  color: var(--muted);
+}
+
+@media (max-width: 760px) {
+  .architecture-details {
+    grid-template-columns: 1fr;
+  }
+
+  .flow-arrow {
+    display: none;
+  }
+
+  .architecture-flow {
+    flex-direction: column;
+  }
+}

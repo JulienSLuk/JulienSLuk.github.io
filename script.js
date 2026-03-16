@@ -24,3 +24,9 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
     navLinks.classList.remove("show");
   });
 });
+
+document.querySelectorAll("img").forEach((img) => {
+  img.addEventListener("error", () => {
+    img.style.display = "none";
+  });
+});

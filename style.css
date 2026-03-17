@@ -607,3 +607,30 @@ a:hover {
   color: var(--accent);
   font-weight: 700;
 }
+
+
+.achievement-category {
+  margin-top: 28px;
+}
+
+.achievement-category h3 {
+  margin-bottom: 14px;
+}
+
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.achievement-grid img {
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: contain;
+  background: #050c1f;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 8px;
+  display: block;
+}

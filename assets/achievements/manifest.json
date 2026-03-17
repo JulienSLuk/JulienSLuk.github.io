@@ -1,0 +1,34 @@
+{
+  "certificates": [
+    "aiLIL.png",
+    "dataLIL.png",
+    "ibm.png",
+    "mlLIL.png",
+    "nlpLIL.png",
+    "nlpLILexam.png",
+    "predLIL.png",
+    "scrum.png",
+    "sgx.png",
+    "uipath.png",
+    "workato.png"
+  ],
+  "awards": [
+    "bsmCoin.png",
+    "CCA_cert_pg1.png",
+    "CCA_cert_pg2.png",
+    "math_olympiad.png",
+    "NYAA_bronze.png",
+    "NYAA_silver.png",
+    "polyAward2023.png",
+    "student_leader.png",
+    "UNSW_sci_merit.png",
+    "violin_grade3.png"
+  ],
+  "testimonials": [
+    "carouTesti.png",
+    "nsBSOMnominee.png",
+    "nsTesti.png",
+    "OCBC Director Referral.png",
+    "OCBC Supervisor Referral.png"
+  ]
+}

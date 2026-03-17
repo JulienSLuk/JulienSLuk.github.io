@@ -30,3 +30,47 @@ document.querySelectorAll("img").forEach((img) => {
     img.style.display = "none";
   });
 });
+
+
+async function loadAchievements() {
+  try {
+    const response = await fetch("assets/achievements/manifest.json");
+    const data = await response.json();
+
+    renderAchievementGroup(
+      "certificatesGrid",
+      "assets/achievements/certificates/",
+      data.certificates || []
+    );
+
+    renderAchievementGroup(
+      "awardsGrid",
+      "assets/achievements/awards/",
+      data.awards || []
+    );
+
+    renderAchievementGroup(
+      "testimonialsGrid",
+      "assets/achievements/testimonials/",
+      data.testimonials || []
+    );
+  } catch (error) {
+    console.error("Failed to load achievements manifest:", error);
+  }
+}
+
+function renderAchievementGroup(containerId, basePath, files) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  files.forEach((file) => {
+    const img = document.createElement("img");
+    img.src = basePath + file;
+    img.alt = file;
+    container.appendChild(img);
+  });
+}
+
+loadAchievements();

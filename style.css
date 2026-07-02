@@ -634,3 +634,75 @@ a:hover {
   padding: 8px;
   display: block;
 }
+
+.achievement-img {
+  cursor: zoom-in;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.achievement-img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: auto;
+  padding: 80px 24px 40px;
+}
+
+.lightbox.show {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 95vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 12px;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+  background: #050c1f;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 22px;
+  right: 28px;
+  font-size: 2rem;
+  background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+.lightbox-controls {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10001;
+}
+
+.lightbox-controls button {
+  background: #111827;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.lightbox-controls button:hover {
+  background: #1f2937;
+}
